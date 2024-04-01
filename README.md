@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Boilerplate and Starter for Next.js 14+ with Tailwind and Shadcn
 
-## Getting Started
+### Features
 
-First, run the development server:
+- 🚀 Next.js
+- 📝 TypeScript
+- 📏 ESLint
+- 🎨 Prettier
+- 🐶 Husky
+- 💡 Lint-Staged
+- 🚨 Commitlint
+- ⚙️ VSCode settings
+- 📚 Shadcn
+- 🎨 Tailwind
+- 🔐 Clerk
+- ⌘ Prisma
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Getting started
+
+To start, run the following command on your local environment:
+
+```shell
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next, execute the following command to run the project locally in development mode:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Open your preferred browser and navigate to http://localhost:3000 to view your project.
 
-## Learn More
+### Set up authentication
 
-To learn more about Next.js, take a look at the following resources:
+Visit Clerk.com and create a new account if you haven't already.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Navigate to the Clerk Dashboard.
+Create a new application within the Clerk Dashboard.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+After creating the application, you'll receive a NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY and CLERK_SECRET_KEY.
 
-## Deploy on Vercel
+Create a file named .env.local if it doesn't exist already. This file should not be tracked by Git for security reasons.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Copy and paste the NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY and CLERK_SECRET_KEY into the .env.local file.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```shell
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_pub_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+```
+
+### Commit Message Format
+
+The [Conventional Commits](https://www.conventionalcommits.org/) specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
+
+The commit message should be structured as follows:
+
+```shell
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
