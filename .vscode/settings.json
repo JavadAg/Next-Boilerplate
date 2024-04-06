@@ -7,10 +7,7 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": [
-    "source.addMissingImports",
-    "source.fixAll.eslint"
-  ],
+  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
   "typescript.preferences.autoImportFileExcludePatterns": [
     // useRouter should be imported from `next/navigation` instead of `next/router`
     "next/router.d.ts",
